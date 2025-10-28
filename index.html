@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halloween Özel</title>
+
+  <!-- GT Walsheim Pro Font -->
+  <link href="https://fonts.cdnfonts.com/css/gt-walsheim-pro" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      font-family: 'GT Walsheim Pro', 'Poppins', sans-serif;
+      background: url('https://raw.githubusercontent.com/grkmefedrsn34/CoBAC-Halloween/main/BACKGROUNDD.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    /* Alt bilgi bölümü */
+    .bottom-section {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 60px 80px;
+      width: 100%;
+    }
+
+    .bottom-section h1 {
+      text-align: center;
+      font-size: 60px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .intro-text {
+      max-width: 850px;
+      margin: 0 auto 60px;
+      text-align: center;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .topics {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .topic {
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .topic h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #ff8c00;
+      font-weight: 600;
+    }
+
+    .topic p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #f3f3f3;
+      margin-bottom: 15px;
+    }
+
+    /* 🎧 Ses oynatıcı stili */
+    .audio-player {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      padding: 10px 20px;
+      width: fit-content;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 12px rgba(255, 140, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .audio-player:hover {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 18px rgba(255, 140, 0, 0.5);
+    }
+
+    .audio-player button {
+      border: none;
+      background: #ff8c00;
+      color: #000;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .audio-player button:hover {
+      transform: scale(1.1);
+      background: #ffa733;
+    }
+
+    .audio-player audio {
+      height: 32px;
+      width: 250px;
+      filter: hue-rotate(10deg) saturate(1.2);
+    }
+
+    /* 📱 Responsive düzen */
+    @media (max-width: 992px) {
+      .bottom-section {
+        padding: 50px 40px;
+      }
+
+      .bottom-section h1 {
+        font-size: 46px;
+      }
+
+      .intro-text {
+        font-size: 17px;
+        margin-bottom: 40px;
+      }
+
+      .audio-player audio {
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .bottom-section {
+        padding: 35px 20px;
+      }
+
+      .bottom-section h1 {
+        font-size: 34px;
+      }
+
+      .intro-text {
+        font-size: 15px;
+      }
+
+      .topic h2 {
+        font-size: 22px;
+      }
+
+      .topic p {
+        font-size: 16px;
+      }
+
+      .audio-player {
+        flex-direction: row;
+        padding: 8px 16px;
+      }
+
+      .audio-player audio {
+        width: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bottom-section">
+    <h1>HALLOWEEN & FRANKENSTEIN</h1>
+
+    <div class="intro-text">
+      <p>Merhaba korku sever! Bu sayfada Halloween’in tarihçesini, geleneklerini ve Frankenstein’ın unutulmaz hikayesini keşfedeceğiniz üç özel ses kaydını bulacaksınız. Kulaklığınızı takın ve Cadılar Bayramı’nın gizemli dünyasına adım atın…</p>
+    </div>
+
+    <div class="topics">
+      <!-- 1. Ses -->
+      <div class="topic">
+        <h2>Halloween’in Tarihçesi</h2>
+        <p>Karanlık gecelerde doğan bir gelenek... Halloween, binlerce yıllık geçmişiyle bugün bile büyüsünü koruyor.</p>
+        <div class="audio-player">
+          <button onclick="toggleAudio(this)">▶</button>
+          <audio src="https://raw.githubusercontent.com/grkmefedrsn34/CoBAC-Halloween/main/Halloween.MP3"></audio>
+        </div>
+      </div>
+
+      <!-- 2. Ses -->
+      <div class="topic">
+        <h2>Halloween’in Gelenekleri</h2>
+        <p>Kostümler, şekerler, korku hikayeleri… Her biri bu gecenin vazgeçilmez bir parçası.</p>
+        <div class="audio-player">
+          <button onclick="toggleAudio(this)">▶</button>
+          <audio src="https://raw.githubusercontent.com/grkmefedrsn34/CoBAC-Halloween/main/Halloween2.MP3"></audio>
+        </div>
+      </div>
+
+      <!-- 3. Ses -->
+      <div class="topic">
+        <h2>Frankenstein’ın Hikayesi</h2>
+        <p>Mary Shelley’nin kaleminden doğan unutulmaz yaratığın hikayesi: yaşam, ölüm ve insanlığın sınırları.</p>
+        <div class="audio-player">
+          <button onclick="toggleAudio(this)">▶</button>
+          <audio src="https://raw.githubusercontent.com/grkmefedrsn34/CoBAC-Halloween/main/Cobac%2012.mp3"></audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 🔊 Play / Pause kontrolü
+    function toggleAudio(btn) {
+      const audio = btn.nextElementSibling;
+
+      // Diğer oynayan sesleri durdur
+      document.querySelectorAll("audio").forEach(a => {
+        if (a !== audio) {
+          a.pause();
+          a.previousElementSibling.textContent = "▶";
+        }
+      });
+
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = "⏸";
+      } else {
+        audio.pause();
+        btn.textContent = "▶";
+      }
+    }
+  </script>
+</body>
+</html>
